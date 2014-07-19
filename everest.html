@@ -21,7 +21,7 @@
 	<div class="game">
 		<div class="dialog">
 			<div class="container front">
-				<h1>Point <span id="point"></span>/3</h1>
+				<h1>It will take 3 correct answers to make it to the next level.<span id="point"></span></h1>
 				<p id="question">
 					 
 				</p>
@@ -34,7 +34,7 @@
 		<div class="progressbar">
 			<div class="progress">
 			</div>
-			<span><strong>Camp #1:</strong> Base Camp</span>
+			<span><strong>Camp I:</strong> Base Camp</span>
 		</div>
 		<div class="lives">
 			<img id="life1" src="content/images/life.png">
@@ -50,25 +50,306 @@
 			$('.tab').click(function() {
 				$('.section.header').removeClass('off');
 			});
+			
+			
+			var level1 = new Array();
 
-			var point = 1;
-			var question = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Horum omnipotens seu Rotomagense, qui arcis agere, frigus missum vox sono aliquot me. Olim populus sparsi mortis, perpetro in auditor vestio mensa peior. Pestis uti praetorgredior sol quotienscumque eo irritus tollo hos.';
-			var answers = [['A', 'Option A'], ['B', 'Option B'], ['C', 'Option C'], ['D', 'Option D']];
-			newPoint(point++, question, answers);
+			var level1 = new Array();
+
+			level1[0] = new Array();
+			level1[0][0] = "True or False: Mount Everest is still growing.";
+			level1[0][1] = new Array("True", "False");
+			level1[0][2] = "True";
+			level1[0][3] = "Mount Everest grows by about 4 millimeters a year due to the Indian tectonic plate continuing to push underneath the Asian plate. The original collision of these two plates is what created the Himalayan Mountains.";
+
+			level1[1] = new Array();
+			level1[1][0] = "In what mountain range is Mount Everest found?";
+			level1[1][1] = new Array("Rocky Mountains", "Ural Mountains", "Himalayan Mountains", "Adirondack Mountains");
+			level1[1][2] = "Himalayan Mountains";
+			level1[1][3] = "The Himalayas are a great mountain system of Asia forming a barrier between the Tibetan Plateau and the Indian subcontinent.  The Himalayas include the highest mountains in the world, with more than 110 peaks rising to elevation of 24,000 feet or more above sea level, one of which is Mount Everest.";
+
+			level1[2] = new Array();
+			level1[2][0] = "True or False: Mount Everest is the tallest mountain in the world.";
+			level1[2][1] = new Array("True", "False");
+			level1[2][2] = "False";
+			level1[2][3] = "Although Mount Everest is the highest point on Earth from sea level, Mauna Kea, an inactive Hawaiian volcano, holds the record as the world’s tallest mountain.  Everest’s peak is at a higher altitude, but Mauna Kea extends an incredible 20,000 ft below the water’s surface. Measured from its base on the ocean floor, its full height stands at 33,465 ft, making it almost a mile taller that Everest.";
+
+			level1[3] = new Array();
+			level1[3][0] = "True or False: There is only one route to the summit of Mount Everest.";
+			level1[3][1] = new Array("True", "False");
+			level1[3][2] = "False";
+			level1[3][3] = "There are 18 different climbing routes on Mount Everest.";
+
+			level1[4] = new Array();
+			level1[4][0] = "About how long does it take to climb Mount Everest?";
+			level1[4][1] = new Array("2 days", "2 weeks", "2 months", "2 years");
+			level1[4][2] = "2 months";
+			level1[4][3] = "Because it is necessary to give the body time to adjust to the altitude, the climb to the summit takes 2 months with stops at 4 different camps.";
+
+			level1[5] = new Array();
+			level1[5][0] = "True or False: Mount Everest is just below the cruising height of a jet.";
+			level1[5][1] = new Array("True", "False");
+			level1[5][2] = "True";
+			level1[5][3] = "An airliner usually cruises at about 30,000 ft, just 971 ft above Mount Everest, which is 29,029 ft above sea level.";
+			
+			var level2 = new Array();
+
+			level2[0] = new Array();
+			level2[0][0] = "From what country were the first people to reach the summit of Mount Everest?";
+			level2[0][1] = new Array("United States", "France", "New Zealand", "Great Britain");
+			level2[0][2] = "New Zealand";
+			level2[0][3] = "New Zealander Edmund Hillary first reached the summit, along with his local guide Tenzing Norgay, on May 29, 1953.";
+
+			level2[1] = new Array();
+			level2[1][0] = "True or False: Climbers burn about 8,000 calories a day.";
+			level2[1][1] = new Array("True", "False");
+			level2[1][2] = "False";
+			level2[1][3] = "Climbers burn over 10,000 calories a day, and twice that as they approach the summit.";
+
+			level2[2] = new Array();
+			level2[2][0] = "Which is not another name for Mount Everest?";
+			level2[2][1] = new Array("Mahabharata", "Chomolungma", "Sagarmatha", "Zhumulangma");
+			level2[2][2] = "Mahabharata";
+			level2[2][3] = "Chomolungma is the Tibetan name for Everest, meaning 'mother goddess of the universe'.  The Nepali name for Everest is Sagarmatha, meaning 'goddess of the sky'.  Zhumulangma is the Chinese version of Chomolungma, the Tibetan name.";
+
+			level2[3] = new Array();
+			level2[3][0] = "True or False: The international border between China and Nepal runs across the precise summit point of Mount Everest.";
+			level2[3][1] = new Array("True", "False");
+			level2[3][2] = "True";
+			level2[3][3] = "The summit of Mount Everest lies exactly on the border between Nepal on the south and Tibet, which belongs to China.";
+
+			level2[4] = new Array();
+			level2[4][0] = "Erik Weihenmayer earned recognition for what notable feat?";
+			level2[4][1] = new Array("Being the first American to reach the summit", "Being the youngest person to reach the summit", "Being the first German to reach the summit", "Being the first blind person to reach the summit");
+			level2[4][2] = "Being the first blind person to reach the summit";
+			level2[4][3] = "Blind American Erik Weihenmayer reached the summit of Mount Everest on May 25, 2001.  He is the only blind person to ever reach the summit.";
+
+			level2[5] = new Array();
+			level2[5][0] = "What causes the most deaths of Mount Everest climbers?";
+			level2[5][1] = new Array("Frostbite/Exposure", "Avalanches", "Falls", "Altitude Sickness");
+			level2[5][2] = "Falls";
+			level2[5][3] = "Falls cause 32.88% of deaths, followed by avalanches at 26.03%.";
+
+			var level3 = new Array();
+
+			level3[0] = new Array();
+			level3[0][0] = "How old was the oldest person to reach the summit of Mount Everest?";
+			level3[0][1] = new Array("67", "73", "80", "91");
+			level3[0][2] = "80";
+			level3[0][3] = "Yuichiro Miura from Japan first became the oldest person to reach the summit at age 70 in 2003.  He broke his own record in 2008 at age 75 and then again at age 80 in 2013.";
+
+			level3[1] = new Array();
+			level3[1][0] = "Who gave Mount Everest its English name?";
+			level3[1][1] = new Array("Andrew Waugh", "George Everest", "Edmund Hillary", "John Armstrong");
+			level3[1][2] = "Andrew Waugh";
+			level3[1][3] = "Everest was given its official English name by the Royal Geographical Society upon a recommendation by Andrew Waugh, the British Surveyor General of India. Waugh named the mountain after his predecessor in the post, Sir George Everest.";
+
+			level3[2] = new Array();
+			level3[2][0] = "In what year was the first Everest expedition?";
+			level3[2][1] = new Array("1917", "1921", "1934", "1940");
+			level3[2][2] = "1921";
+			level3[2][3] = "A British reconnaissance expedition in 1921, followed by subsequent expeditions in 1922 and 1924 the first recorded summit attempts.  The first expedition made it 22,970 ft, the second 27,300, and the third never returned.";
+
+			level3[3] = new Array();
+			level3[3][0] = "True or False: No wildlife exists above 20,000 feet.";
+			level3[3][1] = new Array("True", "False");
+			level3[3][2] = "False";
+			level3[3][3] = "A small jumping black spider called euophrys omnisuperstes can be found as high as 22,000 ft, which makes it possibly the highest confirmed non-microscopic permanent resident on Earth.  Some birds are also found at the higher altitudes, and there is a type of moss that grows as high as 25,980.";
+
+			level3[4] = new Array();
+			level3[4][0] = "True or False: Climbing Mount Everest can cost over $100,000.";
+			level3[4][1] = new Array("True", "False");
+			level3[4][2] = "True";
+			level3[4][3] = "Gear can cost over $8,000, bottled oxygen about $3,000, a climbing permit costs $10,000-$25,000, transferring equipment from the airport to the base camp costs about $2,000.  A local guide for the trip, which greatly increases safety, can cost an additional $40,000-$80,000.";
+
+			level3[5] = new Array();
+			level3[5][0] = "How old was the youngest person to reach the summit of Mount Everest?";
+			level3[5][1] = new Array("9", "13", "18", "22"); 
+			level3[5][2] = "13";
+			level3[5][3] = "American Jordan Romero holds the record for the youngest person to reach the summit.  He made the climb with his parents at age 13, breaking the previous record of 15 years old.";
+
+			var level4 = new Array();
+
+			level4[0] = new Array();
+			level4[0][0] = "By what percentage does the oxygen level decrease near the summit (from sea level)?";
+			level4[0][1] = new Array("12%", "30%", "48%", "66%");
+			level4[0][2] = "66%";
+			level4[0][3] = "Above 25,000 ft there is 66% less oxygen with each breath compared to at sea level. This is referred to as the death zone. Almost all climbers need oxygen bottles. The first summit without the aid of oxygen was by the Italian Reinhold Messner in 1980.";
+
+			level4[1] = new Array();
+			level4[1][0] = "Which is not a health risk of the death zone?";
+			level4[1][1] = new Array("Hypothermia and frostbite", "Lungs filling with fluid", "Stroke", "Swelling of the brain%");
+			level4[1][2] = "Stroke";
+			level4[1][3] = "Some of the risks of high altitude at the death zone include increased chances of hypothermia, frostbite, high-altitude pulmonary oedema which is where lungs fill with fluid as well as high altitude cerebral oedema where the brain swells.";
+
+			level4[2] = new Array();
+			level4[2][0] = "True or False: The best time to climb Mount Everest is in the middle of the summer.";
+			level4[2][1] = new Array("True", "False");
+			level4[2][2] = "False";
+			level4[2][3] = "Summer is monsoon season in Nepal, and the storms making climbing Mount Everest impossible.  Most expeditions are made in May before monsoon season hits.  Attempts are sometimes made in September and October after monsoon season, but addition snow deposited by the monsoons and less stable weather patterns make climbing extremely difficult.";
+
+			level4[3] = new Array();
+			level4[3][0] = "Which of the following would be a typical winter temperature for the summit of Mount Everest?";
+			level4[3][1] = new Array("-14 degrees Fahrenheit", "-33 degrees Fahrenheit", "-42 degrees Fahrenheit", "-60 degrees Fahrenheit");
+			level4[3][2] = "-33 degrees Fahrenheit";
+			level4[3][3] = "Winter temperatures at the summit are usually around 33 degrees Fahrenheit below zero and can drop as low as 76 degrees Fahrenheit below. Temperatures only rise to an 0 degrees Fahrenheit during the warmest part of the summer. ";
+
+			level4[4] = new Array();
+			level4[4][0] = "True or False: Due to the debilitating effects of the death zone, it often takes climbers 12 hours to walk a single mile.";
+			level4[4][1] = new Array("True", "False");
+			level4[4][2] = "True";
+			level4[4][3] = "Achieving even this level of performance requires prolonged altitude acclimatization, which takes 40–60 days for a typical expedition. A sea-level dweller exposed to the atmospheric conditions at the altitude above 27,900 ft without acclimatization would likely lose consciousness within 2 to 3 minutes.";
+
+			level4[5] = new Array();
+			level4[5][0] = "True or False: Climbers injured in the death zone can usually be rescued by helicopter.";
+			level4[5][1] = new Array("True", "False");
+			level4[5][2] = "False";
+			level4[5][3] = "An injured person who cannot walk is in serious trouble.  Helicopters cannot usually land on the summit, and carrying an injured person off of the mountain is very risky.  People who die during the climb are typically left behind.  There are about 150 bodies that have never been recovered from Mount Everest.";
+
+
+			q = 0;
+			errors = 0;
+			count = 0;
+			var question = level1[q][0];
+			var answers = level1[q][1];
+				newPoint(question, answers);
 
 			$('.dialog .button').click(function() {
-				if (point <= 3) {
-					newPoint(point++, question, answers);
-				}
+				//if (verify() == true){
+					count += 1;
+					if (count < 3){
+						if (document.getElementById(level1[q][2]).checked){
+							q += 1;
+							question = level1[q][0];
+							answers = level1[q][1];
+							newPoint(question, answers);
+						}
+						else{
+							//	count -= 1;
+								q += 1;
+								errors += 1;
+								question = level1[q][0];
+								answers = level1[q][1];
+								newPoint(question, answers);
+							}
+					
+					/*	if (count == 3){
+							q = 0;
+							count +=1; 
+							question = "Congratulations! You made it to Camp II!";
+							answers = "";
+							newPoint(question, answers);
+						}*/
+					}	
+					if (count == 3){
+						if (document.getElementById(level1[q][2]).checked){
+							q = 0;
+							question = level2[q][0];
+							answers = level2[q][1];
+							newPoint(question, answers);
+						}
+						else{
+							//	count -= 1;
+								q = 1;
+								errors += 1;
+								question = level1[q][0];
+								answers = level1[q][1];
+								newPoint(question, answers);
+							}
+					
+					/*	if (count == 3){
+							q = 0;
+							count +=1; 
+							question = "Congratulations! You made it to Camp II!";
+							answers = "";
+							newPoint(question, answers);
+						}*/
+					}
+					else if (count < 7 && count >= 3){
+						if (document.getElementById(level1[q][2]).checked){
+							q += 1;
+							question = level2[q][0];
+							answers = level2[q][1];
+							newPoint(question, answers);
+						}
+						else{
+							count -= 1;
+							q += 1;
+							errors += 1;
+							question = level2[q][0];
+							answers = level2[q][1];
+							newPoint(question, answers);
+						}
+						/*if (count == 7){
+							q = -1;
+							question = "Congratulations! You made it to Camp III!";
+							answers = "";
+							newPoint(question, answers);
+						}*/
+					}
+					else if (count < 11 && count >= 7){
+						if (document.getElementById(level3[q][2]).checked){
+							q += 1;
+							question = level3[q][0];
+							answers = level3[q][1];
+							newPoint(question, answers);
+						}
+						else{
+							count -= 1;
+							q += 1;
+							errors += 1;
+							question = level4[q][0];
+							answers = level4[q][1];
+							newPoint(question, answers);
+						}
+						/*if (count == 11){
+							q = -1;
+							question = "Congratulations! You made it to Camp IV!";
+							answers = "";
+							newPoint(question, answers);					
+						}*/
+					}
+					else if (count < 15 && count >= 11){
+						if (document.getElementById(level4[q][2]).checked){
+							count += 1;
+							q += 1;
+							question = level4[q][0];
+							answers = level4[q][1];
+							newPoint(question, answers);
+						}
+						else{
+							q += 1;
+							errors += 1;
+							question = level1[q][0];
+							answers = level1[q][1];
+							newPoint(question, answers);
+						}
+						if (count == 15){
+							question = "Congratulations! You made it to the summit!!";
+							answers = "";
+							newPoint(question, answers);	
+						}
+					}
+					newPoint(question, answers);
+					if (errors == 3){
+						question = "Game Over";
+						answers = "";
+						newPoint(question, answers);
+					}
+
+			//	}
 			});
 		});
-
-		function newPoint(point, question, answers) {
-			$('#point').html(point);
+		
+		function verify(){
+			return ($('input[type=radio]:checked').size() > 0);
+		}
+		function newPoint(question, answers) {
+		//	$('#point').html(point);
 			$('#question').html(question);
 			$('.options').html('');
 			for (var i = 0; i < answers.length; i++) {
-				$('.options').append('<span><input type="radio" name="answers" value="' + answers[i][0] + '">' + answers[i][1] + '</span>');
+				$('.options').append('<span><input type="radio" name="answers" id="' + answers[i] + '">' + answers[i] + '</span>');
 			};
 		}
 	</script>
