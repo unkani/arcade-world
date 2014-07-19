@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script>
+            var mouseX = 0;
+            var mouseY = 0;
+            var foundArray = [false, false, false, false, false, false]; // [tent, sleeping bag, raft, canoe, bike, sunscreen]
+        
+            function initialize()
+            {
+                var canvas = document.getElementById('imageCanvas');
+                var context = canvas.getContext('2d');
+                var image = new Image();
+                image.src = 'NationalParkImages/NationalParkISpy.jpg';
+                image.onload = function() {
+                    context.drawImage(image, 0, 0, 900, 500);
+                };
+                canvas.addEventListener('mousemove', doMouseMove, false);
+                canvas.addEventListener('mousedown', doMouseClick, false);
+                
+                
+                context.rect(450, 500, 50, 50);
+                context.fillStyle='red';
+                context.fill();
+            }
+            
+            function doMouseClick()
+            {
+                // Check to see if the user found another item
+                if(mouseX <= 220 && mouseX >= 130 && mouseY >= 75 && mouseY <= 135) // User found the tent
+                {
+                    alert("You found the tent!");
+                    foundArray[0] = true;
+                }
+                else if(mouseX <= 525 && mouseX >= 475 && mouseY >= 50 && mouseY <= 110) // User found the sleeping bag
+                {
+                    alert("You found the sleeping bag!");
+                    foundArray[1] = true;
+                }
+                else if(mouseX <= 480 && mouseX >= 370 && mouseY >= 350 && mouseY <= 410) // User found the raft
+                {
+                    alert("You found the raft!");
+                    foundArray[2] = true;
+                }
+                else if(mouseX <= 610 && mouseX >= 540 && mouseY >= 450 && mouseY <= 500) // User found the canoe
+                {
+                    alert("You found the canoe!");
+                    foundArray[3] = true;
+                }
+                else if(mouseX <= 230 && mouseX >= 65 && mouseY >= 340 && mouseY <= 410) // User found the bike
+                {
+                    alert("You found the bike!");
+                    foundArray[4] = true;
+                }
+                else if(mouseX <= 520 && mouseX >= 460 && mouseY >= 290 && mouseY <= 360) // User found the sunscreen
+                {
+                    alert("You found the sunscreen!");
+                    foundArray[5] = true;
+                }
+                
+                // Check to see if the user has found all the needed items
+                var index;
+                for(index = 0; index < foundArray.length; index++)
+                {
+                    if(foundArray[index] == false)
+                    {
+                        // User still hasn't found an item
+                        return;
+                    }
+                }
+                
+                // Loop has completed; the user has found all the items
+                displayParkInformation();
+            }
+            
+            function doMouseMove(event)
+            {
+                mouseX = event.pageX;
+                mouseY = event.pageY;
+            }
+            
+            function displayParkInformation()
+            {
+                // Display the pictures and facts for the parks to the user
+                alert("You found all the items!");
+            }
+        </script>
+    </head>
+
+    <body onLoad=initialize()>
+        <canvas id="imageCanvas" width="900" height="500" onclick=mouseClick()></canvas>
+    </body>
+</html>
