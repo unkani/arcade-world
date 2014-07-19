@@ -147,6 +147,9 @@ a {
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
+  -webkit-transition: background-image 1s ease-out;
+  -moz-transition: background-image 1s ease-out;
+  transition: background-image 1s ease-out;
 }
 .game h1 {
   font-family: "Source Sans Pro", sans-serif;
@@ -219,6 +222,10 @@ a {
   display: inline-block;
   height: 100%;
   padding: 0 0.5rem;
+}
+
+.game.camp1 {
+  background-image: url("../images/everest-camp1.jpg");
 }
 
 .button {

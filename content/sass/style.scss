@@ -159,6 +159,7 @@ a {
 	position: relative;
 	font-family: $font-stack;
 	text-align: center;
+	@include transition(background-image 1s ease-out);
 	h1 {
 		font-family: $font-stack;
 		font-weight: 300;
@@ -231,6 +232,10 @@ a {
 			padding: 0 0.5rem;
 		}
 	}
+}
+
+.game.camp1 {
+	background-image: url('../images/everest-camp1.jpg');
 }
 
 .button {
