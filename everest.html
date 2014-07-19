@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arcade World</title>
+    <!-- <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1.0, user-scalable=no"> -->
+	<link rel="stylesheet" type="text/css" href="content/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="section header off">
+		<div class="container">
+			<img src="content/images/logo.png">
+			<img class="sandwichbar" src="content/images/sandwich-bar-black.png">
+		</div>
+	</div>
+	<div class="tab">
+	</div>
+	<div class="game">
+		<div class="dialog">
+			<div class="container front">
+				<h1>Point <span id="point"></span>/3</h1>
+				<p id="question">
+					 
+				</p>
+				<div class="options">
+
+				</div>
+				<input type="submit" class="button" value="Submit">
+			</div>
+		</div>
+		<div class="progressbar">
+			<div class="progress">
+			</div>
+			<span><strong>Camp #1:</strong> Base Camp</span>
+		</div>
+		<div class="lives">
+			<img id="life1" src="content/images/life.png">
+			<img id="life2" src="content/images/life.png">
+			<img id="life3" src="content/images/no-life.png">
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.sandwichbar').click(function() {
+				$('.section.header').addClass('off');
+			});
+			$('.tab').click(function() {
+				$('.section.header').removeClass('off');
+			});
+
+			var point = 1;
+			var question = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Horum omnipotens seu Rotomagense, qui arcis agere, frigus missum vox sono aliquot me. Olim populus sparsi mortis, perpetro in auditor vestio mensa peior. Pestis uti praetorgredior sol quotienscumque eo irritus tollo hos.';
+			var answers = [['A', 'Option A'], ['B', 'Option B'], ['C', 'Option C'], ['D', 'Option D']];
+			newPoint(point++, question, answers);
+
+			// $('.dialog .button').click(function() {
+			// 	if (point <= 3) {
+			// 		newPoint(point++, question, answers);
+			// 	}
+			// });
+		});
+
+		function newPoint(point, question, answers) {
+			$('#point').html(point);
+			$('#question').html(question);
+			$('.options').html('');
+			for (var i = 0; i < answers.length; i++) {
+				$('.options').append('<span><input type="radio" name="' + answers[i][0] + '" value="' + answers[i][0] + '">' + answers[i][1] + '</span>');
+			};
+		}
+	</script>
+</body>
+</html>
