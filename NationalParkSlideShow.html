@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="NationalParkSlideshow.css" />
+    </head>
+    <body>
+        <div class="modalDialog">
+            <a href="#close" title="Close" class="close">X</a>
+            <div id="openModal" class="slideshow">
+                <figure class="show"><img src="NationalParkImages/Denali.jpg" width="620" height="320" alt="" /><figcaption>Denali National Park and Preserve is located in the interior of Alaska and spans more than six million acres. Denali consists of a mix of forests at the lower elevations, tundra at middle elevations, and glaciers, rock, and snow at the highest elevations. Common activities for park visitors include viewing wildlife, climbing mountains, and backpacking. During the winter months, dog-sledding and cross-country skiing are popular activities.</figcaption></figure>
+                <figure><img src="NationalParkImages/Everglades.jpg" width="620" height="320" alt="" /><figcaption>The Everglades National Park is located in southern Florida and covers an area of over 1.5 million acres. The park contains the largest mangrove ecosystem in the western hemisphere and is home to thirty-six threatened or protected species. Visitors of the park are able to explore many miles of both hiking and canoe trails. Camping sites are also present in the Everglades. Low-powered motorboats are allowed in the park, although many of the areas are no-wake zones.</figcaption></figure>
+                <figure><img src="NationalParkImages/GrandCanyon.jpg" width="620" height="320" alt="" /><figcaption>The Grand Canyon National Park is located in Arizona and covers an area of almost 1.25 million acres. The park's main feature, the gorge formed by the Colorado River, is often considered one of the Seven Natural Wonders of the World. The majority of the hiking trails are present along the South Rim of the Grand Canyon, but additional hiking trails are also present along the North Rim.</figcaption></figure>
+                <figure><img src="NationalParkImages/Sequoia.jpg" width="620" height="320" alt="" /><figcaption>Sequoia National Park is located in southeastern California and spans an area of over 400,000 acres. The park is known for its Giant Sequoia trees and contains five of the ten largest trees in the world. Some of the attractions of the park include hiking, camping, fishing, and backpacking. Other attractions in the park include the Tunnel Log, which is a tunnel cut through a fallen Giant Sequoia tree. Another attraction of the park is the Moro Rock, which is a granite dome that is located in the center of the park.</figcaption></figure>
+                <figure><img src="NationalParkImages/Yellowstone.jpg" width="620" height="320" alt="" /><figcaption>Yellowstone National Park is located in the states of Wyoming, Montana, and Idaho. It was established in 1872 and is widely regarded as the first national park in the world. Yellowstone spans an area of almost 3500 square miles and includes lakes, canyons, rivers, and mountain ranges. A major attraction in Yellowstone is the Old Faithful Geyser. Yellowstone is also home to the Yellowstone Caldera, which is the largest supervolcano on the continent.<br><br>Camping opportunities are available throughout the park, with over 2000 campsites present. Park visitors are able to hike on the over 1100 miles of trails available. Fishing, especially fly fishing, is a popular activity for park visitors.</figcaption></figure>
+                <figure><img src="NationalParkImages/Yosemite.jpg" width="620" height="320" alt="" /><figcaption>Yosemite National Park is located in the eastern part of California and covers an area of almost 800,000 acres. Over 95% of this area is designated as wilderness. The altitude in the park varies by almost 11,000 feet. Granite forms the majority of the rock formations in the park. Yosemite is also home to three ancient groves of Giant Sequoia trees.<br><br>Visitors to Yosemite are able to enjoy over 800 miles of hiking trails, which vary from easy strolls to difficult hikes up several of the park's mountains. Bicycles are allowed along the roads and twelve miles of paved trails within the park. Rock climbing is a large attraction in Yosemite, including an opportunity to climb a 3300 foot rock face. Yosemite is also home to the oldest downhill skiing area in California, and other areas of the park are open to cross-country skiing and snowshoeing.</figcaption></figure>
+
+                <span class="previous"><<</span>
+                <span class="next">>></span>
+            </div>
+        </div>
+        
+        <script>
+            (function(){
+            var counter = 0,
+            $items = document.querySelectorAll('.slideshow figure'),
+            numItems = $items.length;
+            var showCurrent = function(){
+            var itemToShow = Math.abs(counter%numItems);
+            [].forEach.call( $items, function(el){
+            el.classList.remove('show');
+            });
+            $items[itemToShow].classList.add('show');
+            };
+            document.querySelector('.next').addEventListener('click', function() {
+            counter++;
+            showCurrent();
+            }, false);
+            document.querySelector('.previous').addEventListener('click', function() {
+            counter--;
+            showCurrent();
+            }, false);
+            })();
+        </script>
+    </body>
+</html>
