@@ -1,0 +1,69 @@
+<html>
+<head>
+<script type="text/javascript" src="C:\Users\Sharanya\Desktop\HackHi\jquery.js"></script>
+<meta http-equiv="Content-Type content="text/html; charset=utf-8"/>
+<title>Peru Rainforest</title>
+</head>
+
+<body>
+
+<div id="console">
+<p id="start">
+You&apos;re a Wildlife Biologist exploring the Peruvian Amazon! You really need to write an impressive research paper about your findings or you&apos;re going to lose this job! Sadly, you have been walking in the sun for hours without spotting a thing. You see water ahead of you and you are really thirsty. As you walk near the water you hear something in the trees. Type your choice:</br>drink water</br>go near trees
+</p>
+
+<p id="water" style="display: none;">
+You move into shallow water and before you can even take a sip, you see something moving. You move closer to it and realize that it’s an anaconda! Run! Type your choice:</br>run left</br>run right</p>
+
+     <p id="runL"  style="display: none;">Wow! That was a close one. Good thing you got away safely, but you are still extremely thirsty. Type your choice:</br>go back for water</br>checkout the trees</p>
+         <p id="leftWater" style="display: none;">The water is  polluted! Were you really that thirsty? You rush to the hospital making no research advancements.</p> <!-- GAME OVER LOSER -->
+         <p id="leftTree" style="display: none;">You collect some delicious fruit and decide to write an article about animals and their diet. Was that easy or what? Research paper = DONE.</p><!-- WINNER -->
+     
+     <p id="runR" style="display: none;">You return to dry land and safely run away from the anaconda. You happen upon some plan species you recognize. You know that over 120 pharmaceutical drugs come from plants in the Amazon and 25% of Western pharmaceuticals also derive from Peru. Type your choice:</br>explore elsewhere</br>search same area</p> 
+         <p id="exploreNew" style="display: none;">You see many impoverished plants and trees. You reflect on the negative impacts of deforestation, darn those oil hungry criminals! Type your choice:</br>go forward</br>go to river</p>
+             <p id="forward" style="display: none;">As you walk along you see something moving slowly in the grass. You hide behind a bush and get great photos the shy Marsh deer. The reddish chestnut color of the coat reminds you of your puppy at home. (Photos) You have been so distracted looking at deer and you realize it’s the sun is going to set soon. You need to find something quick!Type your choice:</br>watch deer</br>go to marsh</p>
+                  <p id="deerEnd" style="display: none;">The sun sets and you enjoy watching the deer stroll. You panic! It’s night and you haven’t found anything. You are definitely going to lose your job now! You cry as you continue your journey back, but what is that small black creature you see struggling? It’s the Harmless Serotine! The Harmless Serotine is considered one of the rarest species of the world! You take it back to your lab and nurture it back to health! You are not only going to keep your job, but now you are a hero in the in the list of crazy amazing Wildlife Biologists! </p>
+                       <p id="riverEnd" style="display: none;">The sun sets and you enjoy watching the deer stroll. You panic! It’s night and you haven’t found anything. You are definitely going to lose your job now! You cry as you continue your journey back, but what is that small black creature you see struggling? It’s the Harmless Serotine! The Harmless Serotine is considered one of the rarest species of the world! You take it back to your lab and nurture it back to health! You are not only going to keep your job, but now you are a hero in the in the list of crazy amazing Wildlife Biologists! </p> </p>
+                  
+                  <p id="marshEnd" style="display: none;">You walk and walk and walk and walk, the sun sets, the animals are nowhere to be found. How disappointing! Maybe you can work in a Zoo? That’s fun too?  </p>
+                  
+         <p id="exploreSame" style="display: none;">You come across a field of butterflies and get some great photos. Type your choice:</br>look for animals</br>Did well, go home</p>
+               <p id="animalsEnd" style="display: none;">As you walk along you see something moving slowly in the grass. You hide behind a bush and get great photos the shy Marsh deer. The reddish chestnut color of the coat reminds Sunny the teddy bear, your cuddly companion. (Photos) You have been so distracted looking thinking about Sunny that the sunsets, you decide to return with not much data. You shouldn’t have gotten so distracted! </p>
+               <p id="suicideEnd" style="display: none;">No it’s not? Are you serious? You are not cut out of this job.</p>
+
+<p id="tree" style="display: none;">
+You look up and are amazed to find yourself in front of a Scarlet Macaws! This magnificent parrot is sitting alone and enjoying some fruits. You take a picture and note down your findings. Type your choice:</br>checkout lakes</br>checkout fields</p>
+      <p id="lakePpl" style="display: none;">
+      You meet the indigenous Urarina tribe. Surprisingly they allow you to watch them cultivating plants. You learn about the different uses of the various plants in Peru.  Type your choice:</br>observe plants</br>look for animals</p>
+         <p id="plantsEnd" style="display: none;">
+         With the help of the indigenous people you discover the Huasai a plant used to cure fever, malaria, jaundice, diabetes, bleeding, and more! You run back to your lab and write start on your research about this plant and many others that the tribe showed you. You are about to write a paper that blows everyone’s socks off! </p>
+         <p id="AnimalsEnd" style="display: none;">
+         Plants are lame! You want to see some awesome animals. As you are walking through the woods you step on a snake. AHHHH! It almost bit you and you are terrified. You had enough of the Amazon for today. Maybe you should have stuck to plants. Now run back home with nothing to show for yourself. 	</p>
+     <p id="fieldEnd" style="display: none;">You realize you are lost! Where the heck are you?! You fumble through your bag, and become restless. When you finally find the map you realize you are near the Ucayali River. But what you didn’t realize is that you are making a lot of noise. The indigenous Shipibo tribe that live here attack you. May you rest in pieces.</p>    
+
+<p id="start_stuck" style="display: none;">Please type "drink water" or "go near trees"</p>
+<p id="treeH_stuck" style="display: none;">Please type "checkout the lakes" or "checkout fields"</p>
+<p id="direction_stuck" style="display: none;">Please type "run left" or "run right"</p>
+<p id="leftH_stuck" style="display: none;">Please type "checkout the trees" or "go back for water"</p>
+<p id="rightH_stuck" style="display: none;">Please type "search same area" or "explore elsewhere"</p>
+<p id="end_stuck" style="display: none;">Please type "look for animals" or "did well, go home"</p>
+<p id="newH_stuck" style="display: none;">Please type "go forward" or "go to river"</p>
+<p id="newEnd_stuck" style="display: none;">Please type "watch deer" or "go to marsh"</p>
+      
+
+
+
+
+
+<!--Everything after this -->
+<div id="placeholder"></div>
+
+<form onsubmit="return false;">
+<input type="text" size="50" autofocus="autofocus" id="input"/>
+</form>
+</div>
+
+<script type="text/javascript" src="C:\Users\Sharanya\Desktop\HackHi\game.js"></script>
+</body>
+
+</html>
