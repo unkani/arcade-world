@@ -56,11 +56,11 @@
 			var answers = [['A', 'Option A'], ['B', 'Option B'], ['C', 'Option C'], ['D', 'Option D']];
 			newPoint(point++, question, answers);
 
-			// $('.dialog .button').click(function() {
-			// 	if (point <= 3) {
-			// 		newPoint(point++, question, answers);
-			// 	}
-			// });
+			$('.dialog .button').click(function() {
+				if (point <= 3) {
+					newPoint(point++, question, answers);
+				}
+			});
 		});
 
 		function newPoint(point, question, answers) {
@@ -68,7 +68,7 @@
 			$('#question').html(question);
 			$('.options').html('');
 			for (var i = 0; i < answers.length; i++) {
-				$('.options').append('<span><input type="radio" name="' + answers[i][0] + '" value="' + answers[i][0] + '">' + answers[i][1] + '</span>');
+				$('.options').append('<span><input type="radio" name="answers" value="' + answers[i][0] + '">' + answers[i][1] + '</span>');
 			};
 		}
 	</script>
