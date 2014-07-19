@@ -251,3 +251,9 @@ a {
   background-color: transparent;
   text-decoration: none;
 }
+
+#bull-spacing{
+position: absolute;
+top: 40rem;
+left: 45%;
+}
