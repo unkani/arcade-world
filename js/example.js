@@ -70,14 +70,21 @@ function update(){
 		this.gored = this.game.add.text(
 		210, 160, '', {font: '42px Arial', fill: '#ffffff'})
 		this.gored.setText("You failed to dodge! \nYour score is "+ totalPoints +"\nClick to play again!");
+		if(totalPoints > localStorage.getItem("highscore")){
+			localStorage.setItem("highscore", totalPoints);
+		}
+		
+		
+		
+		
+		
+		
 		totalPoints = 0;
 		counter = 0;
-
 		this.game.paused = true;
-					
-
 		game.input.onDown.add(restart, this);
-
+	
+		
 		
 	}
 		if(bull.rotation < Math.PI/2 && bull.rotation > -Math.PI/2){
@@ -171,6 +178,5 @@ function restart(){
 
 	
 	
-		
-				
+			
 }
